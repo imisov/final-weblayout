@@ -410,7 +410,7 @@ p {
   overflow: auto;
   width: 300px;
   height: 300px;
-  padding: 0 40px;
+  padding: 2px 40px;
   background: rgba(0, 0, 0, .6);
 }
 
@@ -567,6 +567,7 @@ p {
   outline: none;
   border-bottom: 1px solid var(--white-color);
   background: transparent;
+  transition: color .2s ease-in-out, border-color .2s ease-in-out;
 }
 
 .header__search-input,
@@ -575,6 +576,19 @@ p {
   font-size: 18px;
   line-height: 25px;
   color: rgba(255, 255, 255, .85);
+}
+
+.header__search-input:focus,
+.header__search-input:hover {
+  border-color: var(--hover-main-color);
+}
+
+.header__search-input:active {
+  border-color: var(--dark-main-color);
+}
+
+.header__search-input:focus::placeholder {
+  color: transparent;
 }
 
 .header__search-input-mobile {
@@ -629,8 +643,8 @@ p {
 
 /* scrollbar */
 .simplebar-mask {
- top: 40px;
- bottom: 40px;
+ top: 38px;
+ bottom: 38px;
 }
 
 .simplebar-content-wrapper {
@@ -649,8 +663,6 @@ p {
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-  top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
   border-radius: 0;
@@ -896,18 +908,19 @@ p {
 }
 
 .gallery__swiper-button-next {
-  top: -10%;
+  top: 10%;
   left: 100px;
 }
 
 .gallery__swiper-button-prev {
-  top: -10%;
-  left: 0;
+  top: 10%;
+  left: 3px;
 }
 
 .gallery__swiper-pagination {
-  top: -16%;
-  left: -495px;
+  top: 5%;
+  left: 50px;
+  text-align: start;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -918,12 +931,26 @@ p {
   width: 30px;
   height: 30px;
   border-radius: 100%;
+  outline: none;
   background: var(--gray-40);
   color: var(--white-color);
+  transition: background-color .2s ease-in-out;
 }
 
 .gallery__swiper-button-next:after, .gallery__swiper-button-prev:after {
   font-size: 10px;
+}
+
+.gallery__swiper-button-next:focus, .gallery__swiper-button-prev:focus {
+  border: 2px solid var(--black-color);
+}
+
+.gallery__swiper-button-next:hover, .gallery__swiper-button-prev:hover {
+  background: var(--main-color);
+}
+
+.gallery__swiper-button-next:active, .gallery__swiper-button-prev:active {
+  background: var(--dark-main-color);
 }
 
 /* catalog */
@@ -1047,12 +1074,33 @@ p {
   color: var(--black-text-color);
 }
 
-.catalog__item:focus {
-  border-top: 1px solid var(--main-color);
+.catalog__item-period:focus .catalog__item-title {
+  position: relative;
+  z-index: 1;
+  color: var(--white-color);
+}
+
+.catalog__item-period:focus .catalog__item-title::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  right: 60%;
+  bottom: -6px;
+  left: -1px;
+  z-index: -1;
+  background: var(--main-color);
+}
+
+.catalog__item svg {
+  transition: fill 2s ease-in-out;
 }
 
 .catalog__item:hover {
   border-color: var(--main-color);
+}
+
+.catalog__item:hover svg {
+  fill: var(--light-main-color);
 }
 
 .catalog__item:active {
@@ -1065,6 +1113,51 @@ p {
 
 .catalog__item-period:hover .catalog__item-title {
   color: var(--main-color);
+}
+
+.catalog__item-period:focus svg {
+  fill: var(--light-main-color);
+}
+
+.catalog__item-period:hover .catalog__item-title::before {
+  background: none;
+}
+
+.catalog__tabs-btn {
+  position: relative;
+  z-index: 1;
+  outline: none;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out;
+}
+
+.catalog__tabs-btn:focus {
+  color: var(--white-color);
+}
+
+.catalog__tabs-btn:focus::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  right: -2px;
+  bottom: -4px;
+  left: -2px;
+  background: var(--main-color);
+  z-index: -1;
+}
+
+.catalog__tabs-btn:hover {
+  color: var(--main-color);
+  outline-offset: 2px;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.catalog__tabs-btn:hover::before {
+  background: none;
+}
+
+.catalog__tabs-btn:active {
+  color: var(--dark-main-color);
+  border: none;
 }
 
 .catalog__tabs-btn-active {
@@ -1089,6 +1182,10 @@ p {
   border-radius: 100%;
   transform: rotate(180deg);
   transition: transform .2s ease-in-out;
+}
+
+.ui-state-active svg .svg-stroke-arrow {
+  stroke: var(--black-color);
 }
 
 .ui-state-active .catalog__item-title {
@@ -1164,12 +1261,22 @@ p {
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  outline: none;
   background: var(--gray-ec);
   color: var(--black-color);
+  transition: background-color .2s ease-in-out;
 }
 
 .events__swiper-button-next:after, .events__swiper-button-prev:after {
   font-size: initial;
+}
+
+.events__swiper-button-next:focus, .events__swiper-button-prev:focus {
+  border: 2px solid var(--main-color);
+}
+
+.events__swiper-button-next:hover, .events__swiper-button-prev:hover {
+  background: var(--light-main-color);
 }
 
 .events__swiper-pagination {
@@ -1190,7 +1297,7 @@ p {
 
 .events__item {
   display: flex;
-  outline: 1px solid var(--gray-ca);
+  border: 1px solid var(--gray-ca);
   height: auto;
 }
 
@@ -1235,12 +1342,45 @@ p {
 }
 
 .events__more-link {
+  position: relative;
+  z-index: 1;
   padding-bottom: 4px;
+  outline: none;
   border-bottom: 1px solid var(--main-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   color: var(--main-color);
+}
+
+.events__more-link:focus {
+  color: var(--white-color);
+  border-color: var(--white-color)
+}
+
+.events__more-link:focus::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  bottom: -7px;
+  left: -8px;
+  z-index: -1;
+  background: var(--main-color);
+}
+
+.events__more-link:hover {
+  color: var(--dark-main-color);
+  border-color: var(--dark-main-color)
+}
+
+.events__more-link:hover::before {
+  background: none;
+}
+
+.events__more-link:active {
+  color: var(--black-text-color);
+  border-color: var(--black-text-color)
 }
 
 /* projects */
@@ -1269,6 +1409,7 @@ p {
   width: 30px;
   height: 30px;
   border-radius: 100%;
+  outline: none;
   background: var(--gray-ec);
   color: var(--black-color);
 }
@@ -1283,6 +1424,14 @@ p {
 
 .projects__swiper-button-next {
   right: 0;
+}
+
+.projects__swiper-button-next:focus, .projects__swiper-button-prev:focus {
+  border: 2px solid var(--main-color);
+}
+
+.projects__swiper-button-next:hover, .projects__swiper-button-prev:hover {
+  background: var(--light-main-color);
 }
 
 .projects__desc-link {
@@ -1309,7 +1458,7 @@ p {
 }
 
 .projects__desc-link:hover::before {
-  color: none;
+  color: var(--white-color);
   background: none;
 }
 
