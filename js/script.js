@@ -63,7 +63,7 @@ const gallerySwiper = new Swiper('.gallery__swiper', {
       slidesPerGroup: 1,
       spaceBetween: 0,
     },
-    768: {
+    576: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 38,
@@ -103,12 +103,12 @@ const eventsSwiper = new Swiper('.events__swiper', {
       slidesPerGroup: 1,
       spaceBetween: 34,
     },
-    768: {
+    576: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 33,
     },
-    1024: {
+    769: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 27,
@@ -139,7 +139,7 @@ const eventsSwiper = new Swiper('.events__swiper', {
 
 const projectsSwiper = new Swiper('.projects__swiper', {
   loop: true,
-  centerInsufficientSlides: true,
+  // centerInsufficientSlides: true,
 
   breakpoints: {
     320: {
@@ -147,7 +147,7 @@ const projectsSwiper = new Swiper('.projects__swiper', {
       slidesPerGroup: 1,
       spaceBetween: 20,
     },
-    768: {
+    740: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 33,
