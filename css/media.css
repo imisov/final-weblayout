@@ -143,6 +143,11 @@
     padding: 28px 0;
     padding-bottom: 24px;
   }
+  .catalog__no-image-bg {
+    width: 173px;
+    height: 114px;
+    margin: 6px;
+  }
   .catalog__artist {
     width: calc(53% - 50px);
   }
@@ -288,6 +293,11 @@
   }
   .ui-accordion .ui-accordion-content {
     padding-bottom: 55px;
+  }
+  .catalog__no-image-bg {
+    width: 251px;
+    height: 165px;
+    margin: 10px;
   }
   .catalog__artist {
     width: 100%;

@@ -1075,9 +1075,14 @@ p {
 }
 
 .catalog__item-content {
+  display: flex;
   columns: 3;
   min-height: 239px;
   height: 100%;
+}
+
+.content {
+  display: block;
 }
 
 .no-content {
@@ -1086,6 +1091,7 @@ p {
 
 .catalog__item-card {
   display: flex;
+  align-items: center;
 }
 
 .catalog__no-image {
