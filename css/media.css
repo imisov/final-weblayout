@@ -125,13 +125,26 @@
     margin-bottom: 156px;
   }
   .gallery {
-    padding-bottom: 78px;
+    padding-bottom: 62px;
   }
   .gallery__filters {
     min-width: 36%;
   }
+  .gallery__swiper {
+    padding-top: 68px;
+  }
   .gallery__filter-art {
     margin-bottom: 105px;
+  }
+  .gallery__swiper-pagination {
+    top: 6%;
+    left: 47px;
+  }
+  .gallery__swiper-button-prev {
+    left: -2px;
+  }
+  .gallery__swiper-button-next {
+    left: 100px;
   }
   .catalog__list {
     width: 47%;
@@ -167,7 +180,7 @@
     min-height: 683px;
   }
   .events__item-content {
-    padding: 14px 29px 49px 34px;
+    padding: 10px 29px 49px 34px;
   }
   .events__info {
     text-align: end;
@@ -190,6 +203,9 @@
   }
   .projects__title  {
     margin-bottom: 17px;
+  }
+  .projects__desc {
+    margin-bottom: 18px;
   }
   .contacts__container {
     padding-top: 41px;
@@ -219,9 +235,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container {
-    max-width: 768px;
+    max-width: 992px;
   }
   .header__login-mobile {
     max-width: 40%;
@@ -259,6 +275,9 @@
   .hero__content {
     max-width: 100%;
   }
+  .gallery {
+    padding-bottom: 67px;
+  }
   .gallery__container {
     display: block;
   }
@@ -271,6 +290,9 @@
   }
   .gallery__subtitle {
     margin-bottom: 9px;
+  }
+  .gallery__swiper {
+    padding-top: 78px;
   }
   .choices__inner {
     min-height: 40px;
@@ -515,23 +537,23 @@
   }
   .gallery__swiper {
     padding-top: 16px;
-    padding-bottom: 100px;
+    padding-bottom: 71px;
   }
   .gallery__swiper-button-prev {
     top: unset;
     left: 3px;
-    bottom: 0;
+    bottom: 3px;
     left: 28%;
   }
   .gallery__swiper-pagination {
     top: unset;
     bottom: 0;
-    left: 45%;
+    left: 44%;
   }
   .gallery__swiper-button-next {
     top: unset;
-    bottom: 0;
-    left: 63%;
+    bottom: 3px;
+    left: 62%;
   }
   .catalog {
     margin-bottom: 45px;
@@ -616,8 +638,14 @@
     bottom: -32px;
     /* bottom: 0; */
   }
+  .gallery__swiper-pagination.swiper-pagination-fraction {
+    bottom: 0;
+  }
   .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 var(--swiper-pagination-bullet-horizontal-gap,8px);
+  }
+  .projects {
+    margin-bottom: 48px;
   }
   .projects__desc {
     margin-bottom: 10px;

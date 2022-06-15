@@ -183,7 +183,7 @@ tippy('.projects__tooltip', {
 // Accordion
 $("#accordion").accordion({
   heightStyle: 'content',
-  // collapsible: true,
+  collapsible: true,
   active: false,
 });
 
