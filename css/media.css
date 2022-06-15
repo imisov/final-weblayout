@@ -141,7 +141,7 @@
     left: 47px;
   }
   .gallery__swiper-button-prev {
-    left: -2px;
+    left: 0;
   }
   .gallery__swiper-button-next {
     left: 100px;
