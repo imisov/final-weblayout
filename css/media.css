@@ -458,9 +458,8 @@
     height: 16px;
   }
   .header__search-mobile-close {
-    top: 0;
-    right: 15px;
-    bottom: 0;
+    top: 75px;
+    right: 45px;
   }
   .header__search-mobile-close svg {
     width: 15px;
